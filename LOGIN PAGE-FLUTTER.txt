@@ -1,0 +1,112 @@
+import 'package:flutter/material.dart';
+
+void main() {
+
+  runApp(const MyApp());
+
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+          Widget build(BuildContext context) {
+          return MaterialApp(
+          debugShowCheckedModeBanner: false,
+          home: Scaffold(
+          appBar: AppBar(
+          foregroundColor: Colors.black,
+          backgroundColor: Colors.pinkAccent,
+          shadowColor: Colors.black,
+          title: const Center(child:  Text("LOGIN PAGE")),
+        ),
+        
+      body: Center(
+          child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+                      const Center(
+            child:    SizedBox(width: 300, child: Text("USERNAME :-")),
+                      ),
+                      const SizedBox(height: 50, width: 300, child: TextField()),
+                      Column(
+            children: [
+                      const Center(
+            child:    SizedBox(width: 300, child: Text("PASSWORD :-")),
+                      ),
+                      const SizedBox( height: 50, width: 300, child: TextField()),
+                       Column(
+            children: [
+                       ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                        shadowColor: Colors.white,
+                        primary: Colors.white,
+                        onPrimary: Colors.black,
+                        ),
+                        onPressed: (){}, child: const Text("FORGOT PASSWORD?")),
+                        const SizedBox(
+                        height: 30,
+                        ),
+                        ],
+                        ),
+                        Center(
+             child: SizedBox(
+                            
+                         height: 40,
+                         width: 300,
+                            
+             child: ElevatedButton(
+                         style: ElevatedButton.styleFrom(
+                         shadowColor: Colors.black,
+                         primary: Colors.pinkAccent,
+                         onPrimary: Colors.black87,
+                          ),
+                          onPressed: () {},child: const Text("LOGIN")),
+                           ),
+                           ),
+                           ], 
+                           ),
+                           const SizedBox(
+                           height: 50,
+                            ),
+                            const Text("Or Sign Up Using"),
+                            SizedBox(
+                            height: 60,
+             child: Row(
+                           mainAxisAlignment: MainAxisAlignment.center,
+             children: [
+                           const SizedBox(width: 10,),
+                           ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                           shadowColor: Colors.black,
+                           primary: Colors.blueAccent,
+                           onPrimary: Colors.black,
+                           ),
+                           onPressed: (){}, child: const Text("FACEBOOK")),
+                           const SizedBox(width: 10,),
+                           ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                           primary: Colors.lightBlue,
+                           onPrimary: Colors.black,
+                           shadowColor: Colors.black,
+                           ),
+                           onPressed: (){}, child: const Text("TWITTER")),
+                           const SizedBox(width: 10,),
+                           ElevatedButton(
+                           style: ElevatedButton.styleFrom(
+                           shadowColor: Colors.black,
+                           primary: Colors.deepOrange,
+                           onPrimary: Colors.black,
+                           ),
+                           onPressed: (){}, child: const Text("GMAIL")),
+ 
+                     ],
+                   ),   
+                ) 
+             ],
+           )  
+         ),
+       ),
+    ); 
+  }
+}
